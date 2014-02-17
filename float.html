@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>Ensinando float</title>
+        <script type="text/javascript" 
+                src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <style>
+            * { border: 0; margin: 0; padding: 0;}
+            body { background-color: #333;}
+            .container { background: #444; width: 930px; height: 100%; margin: 0 auto;}
+
+            header { width: 100%; height: 120px; background-color: #DDD;}
+
+            .menu { width: 115px; height: 400px; background-color: #888; float: left;}
+
+            section { width: 700px; height: 400px; background-color: #111; float: left;}
+
+            .ads { width: 115px; height: 400px; background-color: #FF3333; float: right;}
+
+            /* Propriedade clear diz para o elemento não ignorar os elementos flutuantes e considerar eles para posicionamento
+            */
+            footer { width: 100%; height: 200px; background: #FEFEFE; clear: both;}
+
+            /* Cor de fundo transparente: rgba;
+                Elemento transparente: opacity;
+            */
+            .overlay { width: 100%; height: 100%; background-color: rgba(255,99,33,0.7); position: absolute; top: 0}
+
+            /*
+                Centralização de Elemento na página usando position:
+                    Use position: absolute/relative
+                    Top e Left devem estar com 50%
+                    Margem deve ser negativa metade da largura(width) (para margem superior) e metade da altura (height) (margem lateral)
+            */
+            .popup { width: 300px; height: 300px; position: relative; top: 50%; left: 50%; background: #CCC; margin-top: -150px; margin-left: -150px; cursor: pointer; box-shadow: 3px 3px 4px #333; border: 1px dashed #CCC; border-radius: 4px; background: #1e5799; /* Old browsers */
+                background: -moz-linear-gradient(top,  #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); /* FF3.6+ */
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(50%,#2989d8), color-stop(51%,#207cca), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
+                background: -webkit-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Chrome10+,Safari5.1+ */
+                background: -o-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* Opera 11.10+ */
+                background: -ms-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* IE10+ */
+                background: linear-gradient(to bottom,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); /* W3C */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+                }
+
+            
+        </style>
+        <script>
+            $(document).ready(function(){
+                $('.popup').click(function(){
+                    $('.overlay').fadeOut(200);
+
+                });
+
+            });
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <header></header>
+        
+            <aside class="menu"></aside>
+
+            <section>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse euismod suscipit leo. Quisque sit amet imperdiet ipsum. Nulla dictum lobortis magna, et viverra lectus mattis vitae. Interdum et malesuada fames ac ante ipsum primis in faucibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vestibulum vitae arcu non porttitor. Pellentesque sit amet sem mauris. Praesent tincidunt faucibus est, ut feugiat nisi bibendum et. Ut rhoncus velit a nunc accumsan vestibulum sed eu orci. Nam feugiat, dolor id adipiscing porttitor, arcu risus scelerisque nunc, eu condimentum felis orci sit amet diam. Pellentesque ac odio nibh. Curabitur pellentesque bibendum arcu a pharetra. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam commodo arcu vitae nisl lobortis elementum.</p>
+
+<p>Maecenas tempor enim risus, nec tempor nibh gravida a. Aenean vitae lorem vitae nisi accumsan sagittis nec eget lorem. Duis erat lectus, tempor at dapibus sed, pretium vel massa. Vivamus vitae facilisis nisl. Proin aliquet est urna, non scelerisque nisl sodales in. Suspendisse ac libero sit amet sem egestas hendrerit sed ac diam. Integer placerat tempor metus sed porta. Duis in aliquet leo, id condimentum justo. Suspendisse magna ipsum, sollicitudin vitae ullamcorper ac, congue quis diam. Pellentesque tellus lorem, euismod at massa nec, ullamcorper hendrerit ipsum. Praesent iaculis, turpis nec sollicitudin pharetra, augue urna pulvinar enim, et rhoncus mauris tortor auctor dui.</p>
+
+<p>Nullam tincidunt leo id nunc semper, et tincidunt nisl viverra. Ut viverra felis nec sem elementum fringilla. Mauris eu porta quam, id iaculis lacus. Ut vel adipiscing justo. Nulla et ante tristique, sodales purus at, imperdiet orci. Donec non luctus felis. Aenean non consequat dolor. Morbi semper, magna vitae tempus posuere, leo erat ullamcorper eros, id hendrerit quam est quis mi. Donec laoreet erat nibh, at pulvinar turpis scelerisque quis.</p>
+
+            </section>
+
+            <aside class="ads"></aside>
+
+            <footer></footer>
+        </div>
+
+        <div class="overlay">
+            <div class="popup"></div>
+        </div>
+
+    </body>
+</html>
